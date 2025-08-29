@@ -36,7 +36,8 @@ void AMyActor::Move(FVector& Location)
 	Location.X += Step();
 	Location.Y += Step();
 	Location.Z += Step();
-	if (FMath::RandRange(0, 1) == 1) UE_LOG(LogTemp, Display, TEXT("Distance : %f"), Distance(beforeLocation, Location));
+	if (FMath::RandRange(0, 1) == 1) UE_LOG(LogTemp, Warning, TEXT("!!EVNET!!"));
+	UE_LOG(LogTemp, Display, TEXT("Distance : %f"), Distance(beforeLocation, Location));
 	SetActorLocation(Location);
 	UE_LOG(LogTemp, Display, TEXT("Location (%f , %f , %f)"), Location.X, Location.Y, Location.Z);
 }
